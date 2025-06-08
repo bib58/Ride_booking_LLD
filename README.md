@@ -42,14 +42,15 @@ ride/
 
 * Derived classes (`BaseFareCalculator`, `SurgeFareCalculator`, `UpiPayment`, etc.) can replace their base classes without altering system behavior.
 
-### 4. **Interface Segregation Principle (ISP)**
+### 4. **Dependency Inversion Principle (DIP)**
 
-* Interfaces like `PaymentStrategy`, `Notifier`, and `FareCalculator` ensure that classes only implement relevant methods.
+* High-level modules like `RideManager` depend on `Ride` and abstractions like `MatchingStrategy` and `FareCalculator`.
 
-### 5. **Dependency Inversion Principle (DIP)**
+---
 
-* High-level modules like `RideManager` depend on abstractions like `MatchingStrategy` and `FareCalculator`.
+###  **singleton Design Pattern**
 
+* Used this into Driver finding Strategy between nearest and best rated
 ---
 
 ## ⚖️ Assumptions and Simplifications
